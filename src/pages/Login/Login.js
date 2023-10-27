@@ -1,16 +1,16 @@
 import React, {  useEffect } from "react";
 import { Button, Form, Input, notification  } from 'antd';
-import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
-const Login = () => {
-  const navigate = useNavigate();
-  
+import { history } from "../../App";
+const Login = (props) => {
+ 
   useEffect(()=> {
     axios.post('https://localhost:8000/user').then(res => {
       if(res.data.valid){
-        navigate("/")
+        history.push("/")
       }else{
-        navigate("/login")
+        history.push("/login")
       }
     }).catch(err => console.log(err))
   })
@@ -22,7 +22,8 @@ const Login = () => {
       notification.success({ 
         message: 'Đăng nhập thành công', 
       }); 
-      navigate("/")
+      props.history.push("/admin")
+
     }
     
   };
