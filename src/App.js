@@ -1,17 +1,24 @@
-import logo from "./logo.svg";
-import { Router, Switch, Route } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import "./App.css";
 import { HomeTemplate } from "./template.js/HomeTemplate/HomeTemplate";
+
+import Login from './pages/Login/Login';
 import Home from "./pages/Home/Home";
+import AdminLayout from './template.js/admin/AdminLayout';
+import StudentLayout from './template.js/HomeTemplate/HomeTemplate';
+
 export const history = createBrowserHistory();
 function App() {
   return (
-    <Router history={history}>
-      <Switch>
-        <HomeTemplate path="/" exact component={Home} />
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/admin' element={<AdminLayout/>}></Route>
+        <Route path='/student' element={<StudentLayout/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

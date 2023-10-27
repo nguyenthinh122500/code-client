@@ -3,8 +3,8 @@ import { GetListBusinessAction } from "../../redux/action/HomeAction";
 import { useDispatch, useSelector } from "react-redux";
 export default function Home() {
   const dispatch = useDispatch();
-  const {arrBusiness} = useSelector(root =>root.HomeReducer);
-  console.log(arrBusiness)
+  const {arrUser} = useSelector(root =>root.HomeReducer);
+  console.log(arrUser)
   useEffect(() => {
     const action = GetListBusinessAction();
     dispatch(action);
