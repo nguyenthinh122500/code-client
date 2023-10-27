@@ -1,6 +1,7 @@
-import { Route } from "react-router-dom";
+import { Fragment } from "react";
+import { Route, NavLink } from "react-router-dom";
 
-export const HomeTemplate = (props) => {
+export const AdminLayout = (props) => {
   const { Component, ...restProps } = props;
   return (
     <Route
@@ -8,7 +9,7 @@ export const HomeTemplate = (props) => {
       render={(propsRoute) => {
         return (
           <div className="page_bg">
-            <h1>student page</h1>
+            <h1>Admin page</h1>
             <Component {...propsRoute} />
           </div>
         );
