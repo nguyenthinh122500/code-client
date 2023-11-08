@@ -5,7 +5,7 @@ import "./App.css";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import { AdminLayout } from "./template/admin/AdminLayout";
-import { HomeTemplate } from "./template/HomeTemplate/HomeTemplate";
+import { StudentLayout } from "./template/student/StudentLayout";
 import Admin from "./pages/Admin/Admin";
 export const history = createBrowserHistory();
 function App() {
@@ -13,11 +13,12 @@ function App() {
     <Router history = {history}>
       <Switch>
 
-
+    
         <Route path="/login" exact component={Login} />
         <AdminLayout path="/admin" exact Component={Admin} />
-        <HomeTemplate path="/student" exact component={Home} />
-        <HomeTemplate path="/" exact component={Login} />
+        <StudentLayout path="/student" exact component={Home} />
+        <StudentLayout path="/" exact component={Login} />
+
       </Switch>
     </Router>
   );

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root{
---primary: #007bff;
+--primary: #10416d;
 --color-232f3e: #232f3e;
 }
 /* header,footer{
@@ -36,7 +36,7 @@ background-color: var(--primary);
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 92vh;
+  height: 83vh;
 }
 .title-login{
   text-align: center;
@@ -66,4 +66,9 @@ background-color: var(--primary);
 footer{
   background-color: var(--color-232f3e);
   bottom: 0;
+}
+
+
+.selected-row {
+  background-color: #f5f5f5; /* Change to your desired highlight color */
 }

@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
-import { GetListBusinessAction } from "../../redux/action/HomeAction";
-import { useDispatch, useSelector } from "react-redux";
-export default function Home() {
-  const dispatch = useDispatch();
+import React from "react";
+import { useSelector } from "react-redux";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import MainStudent from "./MainStudent";
+const Home = () => {
   const { arrUser } = useSelector((root) => root.HomeReducer);
   console.log(arrUser);
-  useEffect(() => {
-    const action = GetListBusinessAction();
-    dispatch(action);
-  }, []);
-  return <div>Xin chào</div>;
+  return (
+    <>
+      <Header/>
+      <MainStudent />
+      <Footer/>
+    </>
+  )
 }
+export default Home

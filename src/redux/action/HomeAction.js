@@ -1,4 +1,4 @@
-import { http } from "../../utils/response";
+import { http } from "../../api/response";
 
 
 export const GetListBusinessAction = (id) => {
@@ -24,3 +24,5 @@ export const GetListBusinessAction = (id) => {
       }
     };
   };
+
+  
