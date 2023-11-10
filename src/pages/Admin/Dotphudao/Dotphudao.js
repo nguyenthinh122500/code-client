@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const Dotphudao = () => {
-    
+export default function Dotphudao() {
   return (
-    <div>Dotphudao</div>
+    <div>
+      dsaddsd
+    </div>
   )
 }
