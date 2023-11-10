@@ -1,11 +1,12 @@
-import { Route } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Route } from "react-router-dom";
+// const { Content} = Layout;
 export const AdminLayout = (props) => {
   const { Component, ...restProps } = props;
   return (
-    <>
-    <Route
+      <>
+        <Route
       {...restProps}
       render={(propsRoute) => {
         return (
@@ -20,6 +21,6 @@ export const AdminLayout = (props) => {
         );
       }}
     />
-    </>
-  );
+      </>
+    );
 };
